@@ -1,0 +1,86 @@
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 1;
+
+    h1 {
+        margin: 0;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    }
+}
+
+// 卡片网格布局
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); 
+    gap: 20px; 
+}
+
+// 单个卡片样式
+.card {
+    background: hsla(0, 0%, 100%, .05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: translateY(-5px); // 悬浮时放大
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #aaa;
+    }
+
+    .tokenImage {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .tokenInfo {
+        padding: 20px;
+
+        .description {
+            height: 48px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.5;
+            color: #aaa;
+        }
+    }
+}
+
+// 响应式布局（针对小屏）
+// @media (max-width: 768px) {
+//     .grid {
+//         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // 列宽缩小
+//     }
+// }
+
+// @media (max-width: 480px) {
+//     .grid {
+//         grid-template-columns: repeat(1, 1fr); // 每行显示1列
+//     }
+// }

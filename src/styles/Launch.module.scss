@@ -1,0 +1,148 @@
+.content {
+  position: relative;
+  z-index: 1;
+
+  .topText {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: bold;
+
+    .highlight {
+      background: linear-gradient(45deg, #7c3aed, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+
+
+.formSection {
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40PX 20px;
+  border-radius: 10px;
+
+  .formGroup {
+    display: grid;
+    gap: 10px;
+
+    label {
+      font-size: 14px;
+      color: #fff;
+
+      span{
+        color: #666;
+      }
+    }
+
+    .tipText{
+      font-size: .9em;
+      color: #666;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background: hsla(0,0%,100%,.1);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #6c63ff;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .optional {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .fileInput {
+      display: grid;
+      place-items: center;
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      padding: 40px;
+      background: hsla(0,0%,100%,.1);
+      color: #666;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+    
+      &:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    
+      &Active {
+        border: 2px solid #6c63ff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    
+      img.previewImage {
+        max-width: 100%;
+        max-height: 200px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .summary {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    color: #aaa;
+
+    .fee {
+      color: #fff;
+    }
+  }
+
+  .submitButton {
+    background: #6c63ff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      background: #5a52e1;
+    }
+
+    &:disabled {
+      background-color: #aaa;
+      color: #757575; 
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+
+  a {
+    color: #6c63ff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
